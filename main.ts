@@ -27,6 +27,7 @@ namespace SpriteKind {
     export const CoinDown = SpriteKind.create()
     export const BrickDown = SpriteKind.create()
     export const Stone = SpriteKind.create()
+    export const Baidu = SpriteKind.create()
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Trap, function (sprite, otherSprite) {
     if (猴致远是否活着) {
@@ -626,40 +627,86 @@ function 初始化地图信息 () {
     }
     for (let 值 of tiles.getTilesByType(assets.tile`myTile22`)) {
         mySprite = sprites.create(img`
-            ffffffffffffffffffffffffffffffffffffffffffffffff
-            f1111111111111111111111111111111111111111111111f
-            f1111111111111111111111111111111111111111111111f
-            f1111111111111111111111111111111111111111111111f
-            f1111111111111111111111111111111111111111111111f
-            f111111f111111111111111111111ffff1111f111111111f
-            f111111ff11111111111ff1111111f111f1111f111111f1f
-            f111111fffffff111111ff111111f1111f1111f1111ff11f
-            f11111f111111111111f1ff11111f1111f1111f111f1111f
-            f11111f111111111111f11f11111f1111f11111fff11111f
-            f1111f1111111111111f11f11111f1111111111ff111111f
-            f1111f1111111111111f111f1111ff1111111111f111111f
-            f1111f111111111111f1111f11111ff111111111f111111f
-            f111f111111111111f11111f111111f11111111ff111111f
-            f111fffffffffff1f11fffff1111111f1111111f1111111f
-            f111f11111111111f111111f11111111ff11111f1111111f
-            f111f11111111111f1111111f11111111f1111f11111111f
-            f111f11111111111f1111111f111f11111f111f11111111f
-            f111f11111111111f1111111f1111f1111f111f11111111f
-            f111f1111111111ff11111111f111ff1fff111f11111111f
-            f111f1111111111f111111111f1111fff11111f11111111f
-            f111f1111111111f111111111f11111111111f111111111f
-            f111ffffffffff11111111111f11111111111f111111111f
-            f111111111111111111111111111111111111f111111111f
-            f111111111111111111111111111111111111f111111111f
-            f11111111111111111111111111111111111ff111111111f
-            f1111111111111111111111111111111111111111111111f
-            f1111111111111111111111111111111111111111111111f
-            f1111111111111111111111111111111111111111111111f
-            f1111111111111111111111111111111111111111111111f
-            ffffffffffffffffffffffffffffffffffffffffffffffff
+            ffffffffffffffffffffffffffffffffffffffffffffff
+            f11111111111111111111111111111111111111111111f
+            f11111111111111111111111111111111111111111111f
+            f11111111111111111111111111111111111111111111f
+            f11111111111111111111111111111111111111111111f
+            f111111f111111111111111111111ffff1111f1111111f
+            f111111ff11111111111ff1111111f111f1111f111111f
+            f111111fffffff111111ff111111f1111f1111f1111fff
+            f11111f111111111111f1ff11111f1111f1111f111f11f
+            f11111f111111111111f11f11111f1111f11111fff111f
+            f1111f1111111111111f11f11111f1111111111ff1111f
+            f1111f1111111111111f111f1111ff1111111111f1111f
+            f1111f111111111111f1111f11111ff111111111f1111f
+            f111f111111111111f11111f111111f11111111ff1111f
+            f111fffffffffff1f11fffff1111111f1111111f11111f
+            f111f11111111111f111111f11111111ff11111f11111f
+            f111f11111111111f1111111f11111111f1111f111111f
+            f111f11111111111f1111111f111f11111f111f111111f
+            f111f11111111111f1111111f1111f1111f111f111111f
+            f111f1111111111ff11111111f111ff1fff111f111111f
+            f111f1111111111f111111111f1111fff11111f111111f
+            f111f1111111111f111111111f11111111111f1111111f
+            f111ffffffffff11111111111f11111111111f1111111f
+            f111111111111111111111111111111111111f1111111f
+            f111111111111111111111111111111111111f1111111f
+            f11111111111111111111111111111111111ff1111111f
+            f11111111111111111111111111111111111111111111f
+            f11111111111111111111111111111111111111111111f
+            f11111111111111111111111111111111111111111111f
+            f11111111111111111111111111111111111111111111f
+            ffffffffffffffffffffffffffffffffffffffffffffff
             `, SpriteKind.Stone)
         tiles.placeOnTile(mySprite, 值)
         tiles.setTileAt(值, assets.tile`transparency16`)
+    }
+    for (let 值 of tiles.getTilesByType(assets.tile`myTile25`)) {
+        mySprite = sprites.create(img`
+            ...cccccccccccccccccc...
+            ..cbddddddddddddddddbc..
+            .cddddddddddddddddddddc.
+            .cddbbbbbbbbbbbbbbbbddc.
+            .cdbbbbbbbbbbbbbbbbbbdc.
+            .cdbbbbbbbbbbbbbbbbbbdc.
+            cbbbccccccccccccccccbbbc
+            cddcbddddddddddddddbcddc
+            cddcddddddddddddddddcddc
+            cddcddddddddddddddddcddc
+            cddcddddddddddddddddcddc
+            cbdcddddddddddddddddcdbc
+            ccbbbbbbbbbbbbbbbbbbbbcc
+            ccbbbbbbbbbbbbbbbbbbbbcc
+            cccccccccccccccccccccccc
+            ..cbbc............cbbc..
+            `, SpriteKind.Baidu)
+        tiles.placeOnTile(mySprite, 值)
+        tiles.setTileAt(值, assets.tile`transparency16`)
+        mySprite.vx = 50
+    }
+    for (let 值 of tiles.getTilesByType(assets.tile`myTile23`)) {
+        mySprite = sprites.create(img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . b b b b . . . . . . 
+            . . . . b b 7 7 7 7 b b . . . . 
+            . . . . b 7 7 7 3 3 1 b . . . . 
+            . . . b 7 7 7 7 3 3 3 7 b . . . 
+            . . . b 7 7 3 7 7 3 3 7 b . . . 
+            . . b 6 7 7 7 7 7 7 7 7 6 b . . 
+            . . b 6 3 3 7 7 7 7 7 7 6 b . . 
+            . . b b 3 3 7 7 7 7 3 3 6 b . . 
+            . . c b b 5 7 7 7 3 3 b 6 c . . 
+            . . c 5 5 5 5 5 5 b b b 6 c . . 
+            . . c b 5 5 b b 5 b b 5 b c . . 
+            . . . c 5 5 b b 5 5 5 5 c . . . 
+            . . . . c b 5 5 5 5 b c . . . . 
+            . . . . . c c c c c c . . . . . 
+            `, SpriteKind.Enemy)
+        tiles.placeOnTile(mySprite, 值)
+        tiles.setTileAt(值, assets.tile`transparency16`)
+        mySprite.vx = 50
     }
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.GoldCoin, function (sprite, otherSprite) {
@@ -691,8 +738,20 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.CoinDown, function (sprite, othe
     music.baDing.play()
     otherSprite.destroy()
 })
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Stone, function (sprite, otherSprite) {
+    猴致远是否活着 = false
+})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile13`, function (sprite, location) {
     tiles.setTileAt(location, assets.tile`transparency16`)
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Baidu, function (sprite, otherSprite) {
+    if (sprite.y < otherSprite.top && (sprite.x >= otherSprite.left && sprite.x <= otherSprite.right)) {
+        sprite.bottom = otherSprite.top
+        sprite.vy = 0
+        if (controller.A.isPressed()) {
+            sprite.vy = -320
+        }
+    }
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile4`, function (sprite, location) {
     if (猴致远.tileKindAt(TileDirection.Top, assets.tile`myTile4`) && 猴致远.vy < 0) {
@@ -735,6 +794,15 @@ function 清除精灵 () {
         值.destroy()
     }
     for (let 值 of sprites.allOfKind(SpriteKind.BrickDown)) {
+        值.destroy()
+    }
+    for (let 值 of sprites.allOfKind(SpriteKind.Stone)) {
+        值.destroy()
+    }
+    for (let 值 of sprites.allOfKind(SpriteKind.Baidu)) {
+        值.destroy()
+    }
+    for (let 值 of sprites.allOfKind(SpriteKind.Enemy)) {
         值.destroy()
     }
 }
@@ -794,7 +862,7 @@ function 创建英雄 () {
     controller.moveSprite(猴致远, 80, 0)
     猴致远.ay = 980
     猴致远.z = 10
-    猴致远.setFlag(SpriteFlag.ShowPhysics, true)
+    猴致远.setFlag(SpriteFlag.ShowPhysics, false)
     scene.cameraFollowSprite(猴致远)
     anim = animation.createAnimation(ActionKind.Idle, 1000)
     animation.attachAnimation(猴致远, anim)
@@ -1128,8 +1196,15 @@ function 创建英雄 () {
 function 初始化变量 () {
     scene.setBackgroundColor(1)
     当前关卡 = 1
-    关卡总量 = 5
+    关卡总量 = 6
 }
+scene.onHitWall(SpriteKind.Enemy, function (sprite, location) {
+    if (sprite.vx > 0 && sprite.tileKindAt(TileDirection.Right, assets.tile`myTile`)) {
+        sprite.vx = -50
+    } else if (sprite.vx < 0 && sprite.tileKindAt(TileDirection.Left, assets.tile`myTile`)) {
+        sprite.vx = 50
+    }
+})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile17`, function (sprite, location) {
     game.splash("勇敢的勇士, 我仿佛爱上你了!")
     当前关卡 = 1
@@ -1161,6 +1236,19 @@ function 更新地图 () {
     }
     初始化地图信息()
 }
+scene.onHitWall(SpriteKind.Baidu, function (sprite, location) {
+    if (sprite.vx > 0 && sprite.tileKindAt(TileDirection.Right, assets.tile`myTile`)) {
+        sprite.vx = -50
+    } else if (sprite.vx < 0 && sprite.tileKindAt(TileDirection.Left, assets.tile`myTile`)) {
+        sprite.vx = 50
+    }
+})
+scene.onHitWall(SpriteKind.Stone, function (sprite, location) {
+    sprite.vy = 0
+    for (let 值 of tiles.getTilesByType(assets.tile`myTile24`)) {
+        tiles.setWallAt(值, true)
+    }
+})
 scene.onHitWall(SpriteKind.Sword, function (sprite, location) {
     sprite.x += 10
 })
@@ -1408,6 +1496,14 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile11`, function (sprite, 
         music.baDing.play()
     }
 })
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
+    if (sprite.y < otherSprite.top && sprite.vy >= 0) {
+        otherSprite.destroy()
+        sprite.vy = -160
+    } else {
+        猴致远是否活着 = false
+    }
+})
 let anim: animation.Animation = null
 let 关卡总量 = 0
 let 当前关卡 = 0
@@ -1478,7 +1574,7 @@ game.onUpdate(function () {
 })
 game.onUpdate(function () {
     if (!(猴致远是否活着) && 猴致远.isHittingTile(CollisionDirection.Bottom)) {
-        game.splash("猴致远过早的离开了我们~")
+        game.splash("猴骑士过早的离开了我们~")
         更新地图()
     }
     if (!(猴致远是否活着)) {
